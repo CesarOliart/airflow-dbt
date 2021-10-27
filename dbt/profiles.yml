@@ -1,0 +1,30 @@
+config:
+  send_anonymous_usage_stats: False
+ 
+snowflake-connection:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: "{{ env_var('SNOWFLAKE_ACCOUNT_ID') }}" 
+
+      user: "{{ env_var('SNOWFLAKE_DEV_USER') }}" 
+      password: "{{ env_var('SNOWFLAKE_DEV_PASSWORD') }}"
+
+      role: "{{ env_var('SNOWFLAKE_DEV_ROLE') }}" 
+      database: "{{ env_var('SNOWFLAKE_DEV_DATABASE') }}" 
+      warehouse: "{{ env_var('SNOWFLAKE_DEV_WAREHOUSE') }}" 
+      schema: "{{ env_var('SNOWFLAKE_DEV_SCHEMA') }}" 
+      client_session_keep_alive: False
+    prod:
+      type: snowflake
+      account: "{{ env_var('SNOWFLAKE_ACCOUNT_ID') }}" 
+
+      user: "{{ env_var('SNOWFLAKE_PROD_USER') }}" 
+      password: "{{ env_var('SNOWFLAKE_PROD_PASSWORD') }}"
+
+      role: "{{ env_var('SNOWFLAKE_PROD_ROLE') }}" 
+      database: "{{ env_var('SNOWFLAKE_PROD_DATABASE') }}" 
+      warehouse: "{{ env_var('SNOWFLAKE_PROD_WAREHOUSE') }}" 
+      schema: "{{ env_var('SNOWFLAKE_PROD_SCHEMA') }}" 
+      client_session_keep_alive: False  
