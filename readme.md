@@ -1,8 +1,8 @@
-# AIRFLOW 2.2 WITH DBT
+# AIRFLOW 2.2.4 WITH DBT
 
   
 
-In this repo you would get and airflow local environment with dbt (0.20.0) installed and ready to go
+In this repo you would get and airflow local environment with dbt (0.21.1) installed and ready to go
 
   
   
@@ -33,7 +33,7 @@ Add your dbt project into ./dbt folder
 
 Requirements:
 
-1. dbt version supported == 0.20.0
+1. dbt version supported == 0.21.
 
 2. Should include a ./dbt/profiles.yml to referrer it on airflow dags
 

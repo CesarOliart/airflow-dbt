@@ -12,8 +12,8 @@ USER airflow
 RUN pip install --no-cache-dir lxml
 RUN pip install backports-datetime-fromisoformat
 RUN pip install plyvel
-RUN pip install dbt-core==0.20.0
-RUN pip install dbt-snowflake==0.20.0
+RUN pip install dbt-core==0.21.1
+RUN pip install dbt-snowflake==0.21.0
 RUN pip install airflow-provider-fivetran
 RUN pip install requests
 RUN pip install slackclient
